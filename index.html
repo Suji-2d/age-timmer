@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <div class="container">
+    <div class="input-flex">
+      <div class="input-container">
+        <span>DAY</span>
+        <input type="number" id="day">
+        <small class="error-day"></small>
+      </div>
+      <div class="input-container">
+        <span>MONTH</span>
+        <input type="number" id="month">
+        <small class="error-month"></small>
+      </div>
+      <div class="input-container">
+        <span>YEAR</span>
+        <input type="number" id="year">
+        <small class="error-year"></small>
+      </div>
+    </div>
+
+    <button class="submit-btn">
+      <img src="./assets/images/icon-arrow.svg" alt="" srcset="">
+    </button>
+    <div class="output-container">
+    <div class="output">
+      <h1><span class="output-year1">--</span> Years</h1>
+      <h1><span class="output-month">--</span> Months</h1>
+      <h1><span class="output-day">--</span> Days</h1>
+    </div>
+    <div class="output">
+      <div class="output-clock">
+      <h2>Live Timmer</h2>
+      <h1><span class="output-year2">--</span></h1>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- <form action="/">
+    <label for="birthday">Born</label>
+    <input type="number" id="birthday" name="day">
+    <input type="number" id="birthday" name="month">
+    <input type="number" id="birthday" name="year">
+    <input type="submit">
+  </form> -->
+
+</br>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

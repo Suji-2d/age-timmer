@@ -1,0 +1,119 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+}
+
+@font-face {
+    font-family: pop;
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+
+*{
+    font-family: pop !important;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: var(--Off-white);
+}
+
+.container{
+    margin-top: 5%;
+    background-color: var(--White);
+    min-width: 35%;
+    padding: 20px;
+    position: relative;
+    border-bottom-right-radius: 150px;
+}
+
+input {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--Off-white);
+    outline: none;
+}
+
+input:focus{
+    border: 2px solid var(--Purple);
+}
+
+small{
+    font-size: 0.6rem;
+    color: var(--Light-red);
+    font-weight: bold;
+
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.submit-btn{
+    width: 70px;
+    height: 70px;
+    background-color: var(--Purple);
+    position: absolute;
+    right: 4.4%;
+    top: 26%;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn:hover{
+    background-color: var(--Off-black);
+}
+
+.output span{
+    font-size: 2rem;
+    color: var(--Purple);
+    font-style: italic;
+    padding: 10px;
+}
+
+.output-clock{
+    width: 200px;
+    margin-left: 20px;
+
+    border-left: 2px solid var(--Off-white);
+}
+.output-clock h2{
+    margin: 0%;
+    padding: 10px;
+    top: 5%;
+}
+.output-container{
+    display: flex;
+    align-items: center;
+    justify-content:safe;
+}
+
+.input-container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: var(--Smokey-grey);
+    font-weight: bold;
+   
+}
+
+.input-flex{
+    display: flex;
+    border-bottom: 2px solid var(--Off-white);
+    padding: 16px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
