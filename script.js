@@ -4,6 +4,7 @@ const output_month = document.querySelector(".output-month");
 const output_day = document.querySelector(".output-day");
 const output_clock = document.querySelector(".output-clock");
 const output_year1 = document.querySelector(".output-year2");
+const progress = document.querySelector(".js-completed-bar");
 
 //Select input vars
 const input_year = document.querySelector("#year");
@@ -92,6 +93,8 @@ function CalculateDate(){
         let ageMonth = ageDate.getUTCMonth();
         let ageDay = ageDate.getUTCDay() - 1;
 
+        progress.style.width = ageYears * (100/80) + "%";
+
         output_day.textContent = ageDay;
         output_month.textContent = ageMonth;
         output_year.textContent = ageYears;
@@ -115,3 +118,7 @@ function CalculateDate(){
 
 }
 
+if (progress) {
+    progress.style.width = progress.getAttribute("data-complete") + "%";
+    progress.style.opacity = 1;
+  }

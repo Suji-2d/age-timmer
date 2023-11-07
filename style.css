@@ -28,12 +28,13 @@ body{
 }
 
 .container{
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: var(--White);
     min-width: 35%;
-    padding: 20px;
+    padding: 20px 0 20px;
     position: relative;
     border-bottom-right-radius: 150px;
+    height: 280px;
 }
 
 input {
@@ -57,13 +58,13 @@ small{
     text-transform: capitalize;
 }
 
-.submit-btn{
+.submit-btn {
     width: 70px;
     height: 70px;
-    background-color: var(--Purple);
+    background-color: hsl(259deg 59.95% 61.56%);
     position: absolute;
     right: 4.4%;
-    top: 26%;
+    top: 32%;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -71,24 +72,33 @@ small{
     justify-content: center;
 }
 
+
 .submit-btn:hover{
     background-color: var(--Off-black);
 }
 
 .output span{
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--Purple);
     font-style: italic;
     padding: 10px;
+}
+.output h2{
+    font-size: 1.3rem;
+    color: var(--Off-black);
+    font-weight: bold;
+    margin: 10px;
+    text-transform: uppercase;
 }
 
 .output-clock{
     width: 200px;
     margin-left: 20px;
-
+    padding-left: 10px;
+    padding-right: 10px;
     border-left: 2px solid var(--Off-white);
 }
-.output-clock h2{
+.output-clock h3{
     margin: 0%;
     padding: 10px;
     top: 5%;
@@ -116,4 +126,164 @@ small{
     padding: 16px;
     width: fit-content;
     margin-bottom: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+.progress-container {
+
+  position:relative;
+  margin-top: 5rem;
+  padding: 20px 20px;
+}
+
+.progress-decoration {
+  position:relative;
+  height: 50px;
+  width: 100%;
+}
+.progress-decoration svg {
+  position: absolute;
+  fill: rgba(237, 30, 40, 0.2);
+}
+.progress-decoration .icon-cloud {
+  fill: rgba(145, 179, 250, 0.4);
+}
+
+.progress-decoration .icon-tree--two {
+    fill: rgba(36, 132, 36, 0.69);
+}
+.progress-decoration .icon-cloud {
+    fill: rgba(145, 179, 250, 0.4);
+  }
+  
+  .progress-decoration .icon-tree--one {
+      fill: rgba(201, 187, 60, 0.69);
+  }
+
+.progress-decoration #cloud-one {
+  right: 2vw;
+  top: -12vh;
+}
+.progress-decoration #cloud-two {
+  right: 26vw;
+  top: -8vh;
+}
+.progress-decoration #cloud-three {
+  right: 46vw;
+  top: -12vh;
+}
+.progress-decoration #tree-one {
+  bottom: 0;
+  right: 40vw;
+}
+.progress-decoration #tree-two {
+  bottom: 0;
+  right: 5vw;
+}
+.progress-decoration #lamp-one {
+  bottom: 0;
+  right: 16vw;
+}
+.progress-decoration #lamp-two {
+  bottom: 0;
+  right: 0;
+}
+
+.progress-bar {
+  background-color: transparent;
+  border: 3px #bebdbd solid;
+  border-radius: 30px;
+  position: relative;
+  margin: 4px 0 16px 0;
+  height: 50px;
+  width: 600px;
+}
+.progress-bar .completed-bar {
+  background: linear-gradient(to left, #6f5fc2, #8bc661);
+  border-radius: 30px;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: width 2s ease 0.4s;
+  padding: 0 8px;
+}
+.progress-bar .completed-bar__dashed {
+  width: 96%;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+}
+.progress-bar .icon {
+  font-size: 1.5rem;
+  margin-left: 4px;
+}
+
+.progress-information {
+  display: none;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.icon-cloud {
+  height: 50px;
+  width: 50px;
+}
+.icon-lamp {
+  height: 70px;
+  width: 60px;
+}
+.icon-tree--one {
+  height: 60px;
+  width: 60px;
+}
+.icon-tree--two {
+  height: 70px;
+  width: 60px;
+}
+
+p {
+  font-family: "Poppins", "Helvetica", "sans-serif";
+  letter-spacing: 1px;
+  line-height: 1.5;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgba(48, 48, 48, 0.6);
+}
+
+@media only screen and (max-width: 576px) {
+    .progress-container {
+        position: relative;
+        margin-top: 50px;
+        padding: 20px 20px;
+    }
+  .progress-decoration {
+    display: none;
+  }
+
+  .progress-information {
+    display: flex;
+  }
+
+  .progress-bar {
+    margin-bottom: 4px;
+  }
+  .progress-bar .completed-bar__dashed {
+    width: 78%;
+    border: 1rem dashed #cecaca;
+  }
+}
+
+img{
+    width: 60px;
+    height: 60px;
 }
