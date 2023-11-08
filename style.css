@@ -28,10 +28,9 @@ body{
 }
 
 .container{
-    margin-top: 2%;
     background-color: var(--White);
     min-width: 35%;
-    padding: 20px 0 20px;
+    padding: 10px 10px 20px;
     position: relative;
     border-bottom-right-radius: 150px;
     height: 280px;
@@ -91,6 +90,18 @@ small{
     text-transform: uppercase;
 }
 
+h3  {
+    width: 40%;
+    color: var(--Smokey-grey);
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: center;
+}
+p{
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
 .output-clock{
     width: 200px;
     margin-left: 20px;
@@ -130,15 +141,17 @@ small{
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 .progress-container {
-
-  position:relative;
-  margin-top: 5rem;
-  padding: 20px 20px;
+  position: relative;
+  display: flex;
+  height: 60%;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .progress-decoration {
-  position:relative;
-  height: 50px;
+  position: relative;
+  height: 100px;
   width: 100%;
 }
 .progress-decoration svg {
@@ -161,28 +174,28 @@ small{
   }
 
 .progress-decoration #cloud-one {
-  right: 2vw;
-  top: -12vh;
+  right: 5%;
+  top: 2%;
 }
 .progress-decoration #cloud-two {
-  right: 26vw;
-  top: -8vh;
+  right: 45%;
+  top: 10%;
 }
 .progress-decoration #cloud-three {
-  right: 46vw;
-  top: -12vh;
+  left:10%;
+  top: 0%;
 }
 .progress-decoration #tree-one {
   bottom: 0;
-  right: 40vw;
+  right: 68%;
 }
 .progress-decoration #tree-two {
   bottom: 0;
-  right: 5vw;
+  right: 13%;
 }
 .progress-decoration #lamp-one {
   bottom: 0;
-  right: 16vw;
+  right: 30%;
 }
 .progress-decoration #lamp-two {
   bottom: 0;
@@ -250,11 +263,8 @@ p {
   line-height: 1.5;
   display: block;
   margin-block-start: 1em;
-  margin-block-end: 1em;
   margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0px;
   font-weight: 300;
   font-size: 1rem;
   color: rgba(48, 48, 48, 0.6);

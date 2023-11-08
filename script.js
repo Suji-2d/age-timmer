@@ -6,6 +6,8 @@ const output_clock = document.querySelector(".output-clock");
 const output_year1 = document.querySelector(".output-year2");
 const progress = document.querySelector(".js-completed-bar");
 
+const tag = document.querySelector(".tag");
+
 //Select input vars
 const input_year = document.querySelector("#year");
 const input_month = document.querySelector("#month");
@@ -17,6 +19,20 @@ const error_year = document.querySelector(".error-year");
 const error_month = document.querySelector(".error-month");
 const error_day = document.querySelector(".error-day");
 
+const quotes = {
+    10: "Life is like a butterfly: You can chase it, or you can let it come to you.",
+    20: "Time is what we want most, but what we use worst.",
+    25: "Life is not about finding yourself. Life is about creating yourself.",
+    30: "The two most powerful warriors are patience and time.",
+    35: "The purpose of our lives is to be happy.",
+    40: "The only time you should look back is to see how far you've come.",
+    45: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    50: "In the end, it's not the years in your life that count. It's the life in your years.",
+    60: "The way I see it, if you want the rainbow, you gotta put up with the rain.",
+    70: "Life is 10% what happens to us and 90% how we react to it.",
+  };
+
+  var isValid = false
 //input validations
 input_day.addEventListener("input", day =>{
     if(+input_day.value>31){
@@ -110,8 +126,9 @@ function CalculateDate(){
         }
         
         refreshInterval = setInterval(updateTime, 1000);
-         
-    
+        tag.textContent = "Carpe diem, every moment is a precious gift, cherish it to the fullest!"
+        //tag.textContent = quotes[ageYears/10 | 0]
+        console.log(quotes[ageYears/10 | 0])
     }else{
         alert("Error in Input Date");
     }
