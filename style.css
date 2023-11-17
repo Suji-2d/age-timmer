@@ -144,7 +144,8 @@ p{
   position: relative;
   display: flex;
   height: 60%;
-  width: 50%;
+  width: 45%;
+  min-width: 500px;
   flex-direction: column;
   align-items: center;
 }
@@ -197,10 +198,7 @@ p{
   bottom: 0;
   right: 30%;
 }
-.progress-decoration #lamp-two {
-  bottom: 0;
-  right: 0;
-}
+
 
 .progress-bar {
   background-color: transparent;
@@ -209,7 +207,7 @@ p{
   position: relative;
   margin: 4px 0 16px 0;
   height: 50px;
-  width: 600px;
+  width: 90%;
 }
 .progress-bar .completed-bar {
   background: linear-gradient(to left, #6f5fc2, #8bc661);
@@ -270,30 +268,105 @@ p {
   color: rgba(48, 48, 48, 0.6);
 }
 
-@media only screen and (max-width: 576px) {
-    .progress-container {
-        position: relative;
-        margin-top: 50px;
-        padding: 20px 20px;
-    }
-  .progress-decoration {
-    display: none;
-  }
-
-  .progress-information {
-    display: flex;
-  }
-
-  .progress-bar {
-    margin-bottom: 4px;
-  }
-  .progress-bar .completed-bar__dashed {
-    width: 78%;
-    border: 1rem dashed #cecaca;
-  }
-}
 
 img{
     width: 60px;
     height: 60px;
+}
+
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 660px) {
+  body {
+    align-items: flex-start; /* Align content to the top */
+    padding-top: 20px; /* Add some space at the top */
+  }
+
+  .container {
+    min-width: 75%; /* Adjust width for smaller screens */
+    padding: 20px; /* Add padding for better spacing */
+    margin: 10px 40px 10px 40px;
+    min-height: 480px;
+    display: inline;
+  }
+
+  .input-container {
+    margin-right: 0; /* Remove right margin to make the inputs full-width */
+    margin-bottom: 10px; /* Add some space between inputs */
+  }
+
+  .input-flex {
+    display: flex;
+    border-bottom: 2px solid var(--Off-white);
+    padding-bottom: 46px;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 60%;
+    margin-right: 0;
+    margin-top: 5px; /* Remove right margin */
+  }
+
+  .submit-btn {
+    width: 70px;
+    margin-top: 10px;
+    position: relative;
+    top: -3.5em;
+    left: 44%;
+  }
+
+  .output-container {
+    flex-direction: column; /* Stack output elements vertically */
+    align-items: center; /* Center align output */
+    margin: -30px;
+  }
+
+  .output {
+    text-align: center; /* Center align output text */
+  }
+
+  .output-clock {
+    width: 100%; /* Make the clock section full-width */
+    margin: 10px 0; /* Adjust margin for spacing */
+    border-top: 2px solid var(--Off-white);
+    border-left: none; /* Remove left border */
+  }
+  .progress-container {
+    padding: 10px 20px;
+    width: 80%;
+    position: relative;
+    min-width: 300px;
+    margin: 10px 20px;
+  }
+  p  {
+    width: 80%;
+    color: var(--Smokey-grey);
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: center;
+}
+
+  .progress-information {
+  display: flex;
+  } 
+
+  .progress-bar {
+  margin-bottom: 4px;
+  position: relative;
+  width: 100%;
+  }
+  .progress-bar .completed-bar__dashed {
+  width: 100%;
+  border: 0.2rem dashed #cecaca;
+  }
+  .icon-tree--one {
+    display: none;
+  }
+  .progress-decoration #lamp-one {
+    bottom: 0;
+    right: 60%;
+  }
+  /* You may need additional adjustments based on specific elements */
 }
