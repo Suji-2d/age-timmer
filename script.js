@@ -135,6 +135,12 @@ function CalculateDate(){
 
 }
 
+function stopTimmer() {
+    clearInterval(refreshInterval);
+    // release our intervalID from the variable
+    refreshInterval = null;
+}
+
 if (progress) {
     progress.style.width = progress.getAttribute("data-complete") + "%";
     progress.style.opacity = 1;

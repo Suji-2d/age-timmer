@@ -284,8 +284,8 @@ img{
   }
 
   body {
-    align-items: flex-start; /* Align content to the top */
-    padding-top: 20px; /* Add some space at the top */
+    padding-top: 20px; 
+    max-height: 900px;/* Add some space at the top */
   }
 
   .container {
@@ -293,6 +293,7 @@ img{
     padding: 20px; /* Add padding for better spacing */
     margin: 10px 40px 10px 40px;
     min-height: 400px;
+    border-bottom-right-radius: 100px;
     display: inline;
   }
 
@@ -346,11 +347,11 @@ img{
     border-left: none; /* Remove left border */
   }
   .progress-container {
-    padding: 10px 20px;
+    padding: 0px 10px;
     width: 80%;
     position: relative;
     min-width: 300px;
-    margin: 10px 20px;
+    margin: 0px 10px;
   }
   p  {
     width: 80%;
