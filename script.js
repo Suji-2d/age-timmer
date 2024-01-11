@@ -19,18 +19,19 @@ const error_year = document.querySelector(".error-year");
 const error_month = document.querySelector(".error-month");
 const error_day = document.querySelector(".error-day");
 
-const quotes = {
-    10: "Life is like a butterfly: You can chase it, or you can let it come to you.",
-    20: "Time is what we want most, but what we use worst.",
-    25: "Life is not about finding yourself. Life is about creating yourself.",
-    30: "The two most powerful warriors are patience and time.",
-    35: "The purpose of our lives is to be happy.",
-    40: "The only time you should look back is to see how far you've come.",
-    45: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
-    50: "In the end, it's not the years in your life that count. It's the life in your years.",
-    60: "The way I see it, if you want the rainbow, you gotta put up with the rain.",
-    70: "Life is 10% what happens to us and 90% how we react to it.",
-  };
+var quotes = [
+    "Life is not measured by the number of breaths we take, but by the moments that take our breath away.",
+    "Live each day as if it's your last, embracing every moment and savoring each experience.",
+    "The purpose of life is to live it, to taste experience to the utmost, and to reach out eagerly and without fear for newer and richer experiences.",
+    "Time is precious. Waste it wisely.",
+    "Yesterday is history, tomorrow is a mystery, but today is a gift. That's why it's called the present.",
+    "Life is about moments: don't wait for them, create them.",
+    "Make every moment count, for they add up to the story of your life.",
+    "Seize the day, and make it yours.",
+    "Life is an adventure. Enjoy the ride and make every moment an unforgettable memory.",
+    "Live in the present, remember the past, and fear not the future, for it doesn't exist and never shall. There is only now.",
+    "The way to get started is to quit talking and begin doing." 
+];
 
   var isValid = false
 //input validations
@@ -107,7 +108,7 @@ function CalculateDate(){
         let ageDate = new Date(ageDiffMill);
         let ageYears = ageDate.getUTCFullYear() - 1970;
         let ageMonth = ageDate.getUTCMonth();
-        let ageDay = ageDate.getUTCDay() - 1;
+        let ageDay = ageDate.getUTCDay();
 
         progress.style.width = ageYears * (100/80) + "%";
 
@@ -126,9 +127,9 @@ function CalculateDate(){
         }
         
         refreshInterval = setInterval(updateTime, 1000);
-        tag.textContent = "Carpe diem, every moment is a precious gift, cherish it to the fullest!"
-        //tag.textContent = quotes[ageYears/10 | 0]
-        console.log(quotes[ageYears/10 | 0])
+       // tag.textContent = "Carpe diem, every moment is a precious gift, cherish it to the fullest!"
+        tag.textContent = quotes[Math.floor(Math.random() * quotes.length) + 1]
+         console.log(quotes[Math.floor(Math.random() * 10) + 1])
     }else{
         alert("Error in Input Date");
     }
